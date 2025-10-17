@@ -1,0 +1,20 @@
+gpu_mem=16
+start_file=start.elf
+fixup_file=fixup.dat
+
+disable_overscan=1
+initramfs pinn.rfs
+
+[HDMI1]
+hdmi_force_hotplug=1
+
+[pi4]
+start_file=start4.elf
+fixup_file=fixup4.dat
+max_framebuffers=2
+
+[pi5]
+kernel=kernel8.img
+overlay_prefix=overlays6/
+dtoverlay=vc4-kms-v3d
+max_framebuffers=2
