@@ -1,0 +1,6 @@
+#!/bin/sh
+
+exit
+
+/etc/init.d/aesdchar-start-stop start
+/etc/init.d/S99aesdsocket start
