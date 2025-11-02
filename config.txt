@@ -1,0 +1,8 @@
+enable_uart=1
+uart_2ndstage=1
+kernel=Image
+device_tree=bcm2712-rpi-5-b.dtb
+armstub=bl31.bin
+os_check=0
+start_debug=1
+initramfs rootfs.cpio followkernel
