@@ -1,5 +1,7 @@
 #!/bin/bash
 
+rm -rf /repo/buildroot/output/build/linux-custom/
+
 git submodule update --init 
 
 CC=aarch64-none-linux-gnu-gcc
@@ -14,6 +16,12 @@ export CROSS_COMPILE
 #rm -rf buildroot/package/openssl || true
 
 cp /repo/good-working-config /repo/buildroot/.config
+mkdir -p /repo/buildroot/output/build/linux-custom/
+cp /repo/linux.config /repo/buildroot/output/build/linux-custom/.config
+
+make -C buildroot BR2_EXTERNAL=/repo/ext-tree -j73 linux-menuconfig
+
+cp /repo/buildroot/output/build/linux-custom/.config /repo/linux.config
 
 make -C buildroot BR2_EXTERNAL=/repo/ext-tree -j73 menuconfig
 make -C buildroot BR2_EXTERNAL=/repo/ext-tree -j73
