@@ -21,7 +21,7 @@ cp /repo/linux.config /repo/buildroot/output/build/linux-custom/.config
 
 make -C buildroot BR2_EXTERNAL=/repo/ext-tree -j73 linux-menuconfig
 
-cp /repo/buildroot/output/build/linux-custom/.config /repo/linux.config
+# cp /repo/buildroot/output/build/linux-custom/.config /repo/linux.config
 
 make -C buildroot BR2_EXTERNAL=/repo/ext-tree -j73 menuconfig
 make -C buildroot BR2_EXTERNAL=/repo/ext-tree -j73
