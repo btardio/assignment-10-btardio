@@ -1,6 +1,6 @@
 #!/bin/bash
 
-rm -rf /repo/buildroot/output/build/linux-custom/
+# rm -rf /repo/buildroot/output/build/linux-custom/
 
 git submodule update --init 
 

@@ -117,6 +117,7 @@ RUN apt-get install -y libslirp-dev
 
 RUN apt-get install -y qemu-system-aarch64
 
+RUN apt-get install -y telnet
 
 ENTRYPOINT ["/entrypoint.sh"]
 
