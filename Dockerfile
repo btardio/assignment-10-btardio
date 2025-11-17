@@ -63,12 +63,12 @@ RUN apt-get install -y sshpass
 RUN apt-get install -y ncat
 RUN apt-get install -y valgrind
 
-ADD docker_install.sh /docker_install.sh
-ADD runner_install.sh /runner_install.sh
-RUN sh /docker_install.sh
-RUN sh /runner_install.sh
-ENV RUNNER_ALLOW_RUNASROOT=1
-RUN /actions-runner/config.sh remove --url https://github.com/cu-ecen-aeld/assignment-1-btardio --token AFAF6AORHSIAUUEWISU3VGDHRMP2C
+# ADD docker_install.sh /docker_install.sh
+# ADD runner_install.sh /runner_install.sh
+# RUN sh /docker_install.sh
+# RUN sh /runner_install.sh
+# ENV RUNNER_ALLOW_RUNASROOT=1
+# RUN /actions-runner/config.sh remove --url https://github.com/cu-ecen-aeld/assignment-1-btardio --token AFAF6AORHSIAUUEWISU3VGDHRMP2C
 
 RUN apt-get install -y build-essential chrpath cpio debianutils diffstat file gawk gcc git iputils-ping libacl1 liblz4-tool locales 
 RUN apt-get install -y python3 python3-git 
@@ -117,7 +117,6 @@ RUN apt-get install -y libslirp-dev
 
 RUN apt-get install -y qemu-system-aarch64
 
-RUN apt-get install -y telnet
 
 ENTRYPOINT ["/entrypoint.sh"]
 
