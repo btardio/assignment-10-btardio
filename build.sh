@@ -29,7 +29,6 @@ make -C buildroot BR2_EXTERNAL=/repo/ext-tree -j73
 cp -r /repo/buildroot/output/images/ /repo/
 
 cp /repo/config.txt /repo/images/
-cp /repo/cmdline.txt /repo/images/
 
 scp -r /repo/images/* "btardio@192.168.1.126":/var/lib/tftpboot/
 

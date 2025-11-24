@@ -4,4 +4,3 @@ dtoverlay=bcm2712-rpi-5-b.dts
 armstub=bl31.bin
 os_check=0
 arm_64bit=1
-initramfs rootfs.cpio followkernel
