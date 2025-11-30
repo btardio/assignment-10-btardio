@@ -1,10 +1,17 @@
 # Notes:
 
+
+
 docker run -it --network=host -v /var/run/docker.sock:/var/run/docker.sock -u bitbake -v ./:/repo classimg /bin/bash
 
 after moving .config to the buildroot use
 
 make BR2_EXTERNAL=/repo/ext-tree/
+
+
+### Create opkg
+
+rsync -lrvcm --compare-dest=/home/btardio/final_project/repeatable5/assignment-10-btardio/buildroot/output/target/ ./buildroot/output/target/ ./first_opkg/
 
 
 ### Generate root password for BR2_TARGET_GENERIC_ROOT_PASSWD
