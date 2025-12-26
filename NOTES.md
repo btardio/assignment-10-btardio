@@ -53,3 +53,7 @@ In essence, cmdline.txt provides a direct mechanism to configure kernel boot par
 
 
 mount -t squashfs -o loop ./rootfs.squashfs /mnt/squashfs/
+
+
+
+
