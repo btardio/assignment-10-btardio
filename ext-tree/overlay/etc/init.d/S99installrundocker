@@ -1,6 +1,6 @@
 #!/bin/bash
-opkg install http://192.168.1.126/mycontainerd_1.0.0_all.ipk
+opkg install http://192.168.1.126/we-three-kings-os_1.0.0_all.ipk
 export DOCKER_RAMDISK=true
 /etc/init.d/S30cgroupfs2 start
 /etc/init.d/S60dockerd start
-docker container run hello-world
+
