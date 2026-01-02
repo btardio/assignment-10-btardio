@@ -4,3 +4,40 @@ export DOCKER_RAMDISK=true
 /etc/init.d/S30cgroupfs2 start
 /etc/init.d/S60dockerd start
 
+# todo: separate etcd and more than 1 node
+
+#
+
+# little bit ambitious approach
+
+#
+
+# rj45
+
+#  |
+
+# openwrt new unwrap - https://openwrt.org/toh/openwrt/one (traefik install for proxy?)  - learn networking k3s on bare metal without using debugging egress
+
+#  |
+
+#  switch
+
+#  |
+
+# raspberry pi A k3s - optional raspberry pi B k3s (https://docs.akri.sh/?) - usb only - no unshielded serial peripherals, no twisted pair without crc and maybe no ribbons
+
+#  |
+
+# Image Restoration - Python Image Processing Cookbook 
+
+# 
+
+# no pressure stay calm...
+
+wget https://github.com/k3s-io/k3s/releases/download/v1.35.0%2Bk3s1/k3s-arm64
+chmod +x k3s-arm64
+./k3s-arm64 server --cluster-init --bind-address 192.168.1.100 --write-kubeconfig-mode 644
+
+
+
+
